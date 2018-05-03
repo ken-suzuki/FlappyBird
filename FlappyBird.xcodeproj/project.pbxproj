@@ -12,6 +12,8 @@
 		BE26858620945E69001D63D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE26858420945E69001D63D3 /* Main.storyboard */; };
 		BE26858820945E6A001D63D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE26858720945E6A001D63D3 /* Assets.xcassets */; };
 		BE26858B20945E6A001D63D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE26858920945E6A001D63D3 /* LaunchScreen.storyboard */; };
+		BE2685932094690F001D63D3 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2685922094690F001D63D3 /* GameScene.swift */; };
+		BE7F86752099FCB200AA3099 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7F86742099FCB200AA3099 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		BE26858720945E6A001D63D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE26858A20945E6A001D63D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE26858C20945E6A001D63D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE2685922094690F001D63D3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		BE7F86742099FCB200AA3099 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE7F86752099FCB200AA3099 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,7 @@
 			children = (
 				BE26857F20945E69001D63D3 /* FlappyBird */,
 				BE26857E20945E69001D63D3 /* Products */,
+				BE7F86732099FCB200AA3099 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +62,21 @@
 			children = (
 				BE26858020945E69001D63D3 /* AppDelegate.swift */,
 				BE26858220945E69001D63D3 /* ViewController.swift */,
+				BE2685922094690F001D63D3 /* GameScene.swift */,
 				BE26858420945E69001D63D3 /* Main.storyboard */,
 				BE26858720945E6A001D63D3 /* Assets.xcassets */,
 				BE26858920945E6A001D63D3 /* LaunchScreen.storyboard */,
 				BE26858C20945E6A001D63D3 /* Info.plist */,
 			);
 			path = FlappyBird;
+			sourceTree = "<group>";
+		};
+		BE7F86732099FCB200AA3099 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE7F86742099FCB200AA3099 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2685932094690F001D63D3 /* GameScene.swift in Sources */,
 				BE26858320945E69001D63D3 /* ViewController.swift in Sources */,
 				BE26858120945E69001D63D3 /* AppDelegate.swift in Sources */,
 			);
@@ -289,7 +305,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.ken.suzuki.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.ken.suzuki.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
