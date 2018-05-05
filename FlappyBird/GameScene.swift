@@ -394,11 +394,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate /* 追加 */ {
             
         })
         
-        // 次のアイテム作成までの待ち時間のアクションを作成
-        let waitAnimation = SKAction.wait(forDuration: 2)
-        
-        // アイテムを作成->待ち時間->アイテムを作成を無限に繰り替えるアクションを作成
-        let repeatForeverAnimation = SKAction.repeatForever(SKAction.sequence([createItemAnimation, waitAnimation]))
+        // アイテム作成の調整時間(1秒)
+        let waitAnimation = SKAction.wait(forDuration: 1)
+        // 1秒待ってから->アイテムを作成->1秒待ち時間->1秒待ち時間->アイテムを作成を無限に繰り替えるアクションを作成
+        let repeatForeverAnimation = SKAction.repeatForever(SKAction.sequence([waitAnimation, createItemAnimation, waitAnimation]))
         
         itemNode.run(repeatForeverAnimation)
         
